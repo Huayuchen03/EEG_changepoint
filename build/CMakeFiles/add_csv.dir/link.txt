@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-rpath,/opt/homebrew/opt/libomp/lib CMakeFiles/add_csv.dir/Est.cpp.o CMakeFiles/add_csv.dir/main.cpp.o -o add_csv  /opt/homebrew/opt/libomp/lib/libomp.dylib
