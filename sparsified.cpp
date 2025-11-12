@@ -273,7 +273,7 @@ get_est_cpp(const std::vector<double> &time_series,
     if (n < 3 || n_w <= 0) return {};
 
     // Stage-1 defaults: m ≈ n^{1/3}; global neighborhood width d_rad.
-    const int m = std::max(1, (int)std::floor(std::pow((double)n, 1.0/3.0))));
+    const int m = std::max(1, (int)std::floor(std::pow((double)n, 1.0/3.0)));
     const double d_rad = std::log((double)m) / (4.0 * std::sqrt((double)m));
 
     // 1) Dense grid and DPPT on the grid.
@@ -297,7 +297,7 @@ get_est_cpp(const std::vector<double> &time_series,
     // 4) Selection loop with early-stopping on consecutive misses.
     const int half_width = (refined_radius > 0)
                          ? refined_radius
-                         : std::max(1, (int)std::floor(std::sqrt((double)n))));
+                         : std::max(1, (int)std::floor(std::sqrt((double)n)));
     const int cap = (refined_grid_len > 0) ? refined_grid_len : 1000;
 
     std::vector<int> chosen; chosen.reserve(nf_max); // store 1-based indices
